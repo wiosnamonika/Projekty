@@ -1,13 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 
-// var contest = document.getElementsByClassName('contest');
-// contest.style.display = 'block';
-// setTimeout(hide, 2000);
 
-// console.log(contest);
-document.querySelector('img[alt=konkurs]').style.display = 'block';
-setTimeout(hide, 2000);
+var hidden = false;
+
+setInterval(function(){
+    document.querySelector("a.contest").style.visibility= hidden ? "visible" : "hidden";
+    hidden = !hidden;
+},3000);
+
+
+
 
 var allLi = document.querySelectorAll('.gallery img');
 var images = document.querySelectorAll('img');
